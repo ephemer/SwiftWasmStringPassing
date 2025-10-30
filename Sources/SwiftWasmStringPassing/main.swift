@@ -25,7 +25,7 @@ func process(string: UnsafeMutablePointer<UnsafePointer<UInt8>>, length: UnsafeM
     }
 
     // ... create return value...
-    let finalJSONValue: JSONValue = .array([.number("123"), .null, .string("test was \(testValue)")])
+    let finalJSONValue: JSONValue = .array([.number("123"), .null, .string("`input.test` was `\(testValue)`")])
 
     byteArray = []
     finalJSONValue.appendBytes(to: &byteArray)
