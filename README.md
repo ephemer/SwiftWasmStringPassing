@@ -2,11 +2,11 @@
 
 A demo repo showing how to pass a JSON string in and out of Swift from JS.
 
-As a bonus, we do some manipulation of the JSON string.
+As a bonus, we do some manipulation of the parsed JSON object.
 
 Although Wasm itself supports multiple return types, which could make this even easier, that isn't supported by the C calling convention, so Swift doesn't currently have a way of accessing this.
 
-So the way this repo is set up, this is not conceptually different from passing a String to C and back.
+So the way this repo is set up, this is not conceptually different from passing a String to C and back: we pass a pointer to a pointer to the String data, and a pointer to the string length. We consume the incoming string, and then update the pointers with the stringified JSON response.
 
 Uses Swift Embedded: the resulting binary, including full unicode support (!), and JSON encoding / decoding, weighs in at 140kB after running `wasm-strip` on the release binary. With Embedded, Swift code size is competitive with Rust.
 
