@@ -4,7 +4,7 @@ import { readFile } from "fs/promises";
 class SwiftModule {
     static async create() {
         const wasi = new WASI({ version: "preview1" });
-        const wasm = await WebAssembly.compile(await readFile(".build/debug/SwiftWasmStringPassing.wasm"));
+        const wasm = await WebAssembly.compile(await readFile(".build/release/SwiftWasmStringPassing.wasm"));
         const instance = await WebAssembly.instantiate(wasm, wasi.getImportObject());
 
         wasi.start(instance);

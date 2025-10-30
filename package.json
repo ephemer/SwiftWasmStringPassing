@@ -15,6 +15,6 @@
   "type": "mjs",
   "main": "index.js",
   "scripts": {
-    "start": "swift build --swift-sdk swift-6.2-RELEASE_wasm-embedded -Xlinker -lswiftUnicodeDataTables && node test.js"
+    "start": "swift build --swift-sdk swift-6.2-RELEASE_wasm-embedded -Xlinker -lswiftUnicodeDataTables -c release && node test.js"
   }
 }
