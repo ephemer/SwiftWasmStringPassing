@@ -1,0 +1,15 @@
+{
+  "originHash" : "e06a7d81a0c8ea79af4886999b656d16243cb4a19e1bf4ade36d695bf6074ab5",
+  "pins" : [
+    {
+      "identity" : "swift-extras-json",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/flowkey/swift-extras-json.git",
+      "state" : {
+        "branch" : "embedded",
+        "revision" : "43de1e279e050ef69deeb86099e42250a8c1d508"
+      }
+    }
+  ],
+  "version" : 3
+}
